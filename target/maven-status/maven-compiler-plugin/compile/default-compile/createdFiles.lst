@@ -1,0 +1,4 @@
+br\edu\ifsul\testes\TestePersistirRaca.class
+br\edu\ifsul\testes\TesteListarRacas.class
+br\edu\ifsul\modelo\Pet.class
+br\edu\ifsul\modelo\Raca.class
