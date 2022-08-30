@@ -1,4 +1,8 @@
 br\edu\ifsul\testes\TestePersistirRaca.class
+br\edu\ifsul\testes\TesteAlterarRaca.class
+br\edu\ifsul\modelo\Raca.class
+br\edu\ifsul\testes\TestePersistirPet.class
+br\edu\ifsul\testes\TesteRemoverRaca.class
+br\edu\ifsul\testes\TesteListarPets.class
 br\edu\ifsul\testes\TesteListarRacas.class
 br\edu\ifsul\modelo\Pet.class
-br\edu\ifsul\modelo\Raca.class

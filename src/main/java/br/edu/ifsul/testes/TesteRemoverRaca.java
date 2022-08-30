@@ -5,7 +5,6 @@
 package br.edu.ifsul.testes;
 
 import br.edu.ifsul.modelo.Raca;
-import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -14,25 +13,24 @@ import javax.persistence.Persistence;
  *
  * @author estef
  */
-public class TesteListarRacas {
+public class TesteRemoverRaca {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("PetShop-Estefani-ModelPU"); // recebe o nome da unidade de persistencia que vem do arquivo persistence.xml  (o persistence-unit)
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("PetShop-Estefani-ModelPU"); 
         EntityManager em = emf.createEntityManager();
         
-        List<Raca> racas = em.createQuery("from Raca order by nome").getResultList();
+        Raca r = em.find(Raca.class, 1);  
         
-        for (Raca r : racas){
-            System.out.println("\nID: " + r.getId() + "\nNome: " + r.getNome() + "\n");
-        }
-        
+        em.getTransaction().begin();
+        em.remove(r);
+        em.getTransaction().commit();
         em.close();
         emf.close();
-        
+                
     }
     
 }

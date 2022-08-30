@@ -49,7 +49,7 @@ public class Pet implements Serializable {
     @NotBlank(message = "A espécie deve ser informada")
     @Length(max = 40, message = "A espécie não pode ter mais de {max} caracteres")
     @Column(name = "especie", nullable = false, length = 40)
-    private String especie;
+    private Raca especie;
     
     public Pet(){
         
@@ -87,11 +87,11 @@ public class Pet implements Serializable {
         this.peso = peso;
     }
 
-    public String getEspecie() {
+    public Raca getEspecie() {
         return especie;
     }
 
-    public void setEspecie(String especie) {
+    public void setEspecie(Raca especie) {
         this.especie = especie;
     }
 
@@ -116,5 +116,5 @@ public class Pet implements Serializable {
         final Pet other = (Pet) obj;
         return Objects.equals(this.id, other.id);
     }
-    
+
 }

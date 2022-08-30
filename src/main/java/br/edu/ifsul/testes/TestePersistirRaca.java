@@ -11,7 +11,7 @@ import javax.persistence.Persistence;
 
 /**
  *
- * @author 20202PF.CC0011
+ * @author estef
  */
 public class TestePersistirRaca {
 
